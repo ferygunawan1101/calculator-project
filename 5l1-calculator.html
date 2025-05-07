@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator v.5l</title>
+</head>
+<body>
+  <h2>Calculator v.5l</h2>
+
+  <p>
+    <button onclick="inputNumString('1')">1</button>
+
+    <button onclick="inputNumString('2')">2</button>
+
+    <button onclick="inputNumString('3')">3</button>
+  </p>
+
+  <p>
+    <button onclick="inputNumString('4')">4</button>
+
+    <button onclick="inputNumString('5')">5</button>
+
+    <button onclick="inputNumString('6')">6</button>
+  </p>
+
+  <p>
+    <button onclick="inputNumString('7')">7</button>
+
+    <button onclick="inputNumString('8')">8</button>
+
+    <button onclick="inputNumString('9')">9</button>
+  </p>
+
+  <p>
+    <button onclick="inputNumString('0')">0</button>
+
+    <button onclick="inputNumString(' + ')">+</button>
+
+    <button onclick="inputNumString(' - ')">-</button>
+  </p>
+  
+  <p>
+    <button onclick="calculate()">=</button>
+  </p>
+  
+
+  
+  <script>
+    let calculation = '';
+    function inputNumString(num) {
+      calculation += num;
+      console.log(calculation);
+    }
+
+    function calculate() {
+      calculation = eval(calculation);
+      console.log(calculation);
+    }
+  </script>
+</body>
+</html>
