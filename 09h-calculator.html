@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculator</title>
+</head>
+<body>
+  <h1>Calculator</h1>
+
+  <p>Total</p>
+  <p class="js-result"></p>
+
+  <p>
+    <button onclick="updateCalculate('1')">1</button>
+    <button onclick="updateCalculate('2')">2</button>
+    <button onclick="updateCalculate('3')">3</button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculate('4')">4</button>
+    <button onclick="updateCalculate('5')">5</button>
+    <button onclick="updateCalculate('6')">6</button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculate('7')">7</button>
+    <button onclick="updateCalculate('8')">8</button>
+    <button onclick="updateCalculate('9')">9</button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculate('0')">0</button>
+    <button onclick="updateCalculate(' + ')">+</button>
+    <button onclick="updateCalculate(' - ')">-</button>
+  </p>
+
+  <p>
+    <button onclick="updateCalculate(' * ')">x</button>
+    <button onclick="updateCalculate(' / ')">:</button>
+    <button onclick="evalCal()">=</button>
+  </p>
+
+  <p>
+    <button onclick="
+      resetCalculation();
+    ">Reset</button>
+  </p>
+  
+  <script>
+    let resultCalculator = '';
+
+    function updateCalculate(inputNum) {
+      resultCalculator += inputNum;
+      document.querySelector('.js-result')
+        .innerHTML = resultCalculator;
+    }
+
+    function evalCal() {
+      resultCalculator = eval(resultCalculator);
+      document.querySelector('.js-result')
+        .innerHTML = resultCalculator;
+    }
+
+    function resetCalculation() {
+      resultCalculator = '';
+      document.querySelector('.js-result')
+        .innerHTML = resultCalculator;
+    }
+
+  </script>
+</body>
+</html>
